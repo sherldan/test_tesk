@@ -48,9 +48,10 @@
                     @endforeach
                 @endforeach
 
-                <nav aria-label="Page navigation example">
+                 <nav aria-label="Page navigation example">
                     <div>{{$client->links()}}</div>
                 </nav>
+            </table>
 
         </div>
     </div>
