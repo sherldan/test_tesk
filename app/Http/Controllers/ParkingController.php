@@ -15,7 +15,7 @@ class ParkingController extends Controller
 {
     public function index()
     {
-        $client = Client::paginate(7);
+        $client = Client::paginate(20);
         $cars = Car::all();
 
         return view('client.index', compact('client', 'cars'));
