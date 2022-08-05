@@ -71,10 +71,10 @@ class ParkingController extends Controller
     public function update(Client $client)
     {
         $data = request()->validate([
-            'phone' => 'required|unique:clients|digits:11',
+            'phone' => 'required',
             'full_name' => 'required|filled|string|min:3',
             'sex' => 'string',
-            'address' => 'string',
+            'address' => 'required|string',
         ]);
         $client->update($data);
         return redirect()->route('client.show', $client->id);
